@@ -1,3 +1,7 @@
+from time import sleep
+from colorama import Fore, init
+init(convert=True)
+
 print(f''' 
 
 ============= PAINEL DE LOGIN =============
@@ -15,6 +19,8 @@ lastro = int(input('Digite o lastro: '))
 print('')
 altura = int(input('Digite a altra: '))
 print('')
-pesokg = 25
+pesokg = int(input('Digite o Peso de 1 caixa: '))
+print('')
 resultado = (lastro * altura) * pesokg
-print('O Pallet Pesa No Total: {}Kg '.format(resultado))
+print(f'{Fore.RED}O Pallet Pesa No Total:' ' {} Kg'.format(resultado))
+sleep(40)
